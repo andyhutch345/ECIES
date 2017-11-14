@@ -1,0 +1,11 @@
+platform :ios, '9.0'
+
+target 'ECIES_project' do
+  use_frameworks!
+  pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "master"
+  
+  target 'ECIES_projectTests' do
+    inherit! :search_paths
+  end
+
+end
