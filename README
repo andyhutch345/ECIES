@@ -1,0 +1,11 @@
+This project implements the code I wrote for project1, the ChaCha20Poly1305 implementation in Swift. While testing the chacha code on what ended up being much larger data values than the test vectors in project1, I came across a few syntactical bugs in my code, that I've since updated so now the ChaChaPoly code is much more resilient and works with data of all sizes. 
+
+For generating the key for the AEAD, I used the sha256 hash which I found in the CryptoSwift library. In order to use this, I had to install a package, which meant I had to use an Xcode workspace rather than just a playground. 
+
+In order to run this code, you must download the repo, and open the *** ECIES_project.workspace ***. This code will not run if you open the .xcodeproj or .playground. After opening the workspace, click on the ECIES_playground on the left side navigator, and that'll show the ECIES code. Upon first downloading the code and opening in XCode, there may be an error saying that it can't find the module CryptoSwift, which will prevent the rest of the code from running. This is typically fixed by cleaning the project (command-shift-k), and then re-building (command-b). The code should then start compiling. It may take a minute or 2 for the first compilation.  
+
+The handy thing about the playground for demonstrating code is that is shows the values of each variable on the right side. The very last line of code represents the decrypted image, and clicking on the eyeball next to it will show said image. 
+
+If you would like to test the code with different images, download them, and drag them to the resources folder in the lefthand navigator, under the ECIES_playground.plaground. There are currently 3 different images in the folder. Then change the 8th line, currently let bobImage: UIImage! = UIImage(named:"sf.jpg"), where "sg.jpg" equals whatever the image is saved as. 
+
+If there are any issues running the code, I can come in during office hours or make an appointment. Thanks!
